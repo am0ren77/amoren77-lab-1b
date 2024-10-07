@@ -142,5 +142,47 @@ G: 0
 
 // Satisfying NR1-NR4
 
+// TC-15
+// Tests Requirements NR1
+// 
+// expected output: 
+C: 0
 
-// // Satisfying NR5
+// TC-16
+// Tests Requirements NR2
+// 
+// expected output: 
+TC: 0
+
+// TC-17
+// Tests Requirements NR3
+// 
+// expected output: 
+GT: 0
+
+// TC-18
+// Tests Requirements NR4
+// 
+// expected output: 
+Enrollment 
+
+// Satisfying NR5
+
+// TC-19
+// Tests Requirements NR5a
+// 
+// expected output: 
+GGPA: 0
+
+// TC-20
+// Tests Requirements NR5b
+// 
+// expected output: 
+TGPA: 0
+
+// TC-21
+// Tests Requirements NR5c
+// 
+// expected output: 
+BGPA: 0
+
