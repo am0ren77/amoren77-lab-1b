@@ -214,7 +214,8 @@ def find_highest_gpa_in_grade(grade):
     if results:
         highest_gpa_student = max(results, key=lambda student: student[5])
         teacher_name = teachers.get(highest_gpa_student[3], "Unknown")
-        teacher_names_str = ", ".join(teacher_name)
+        unique_teachers = list(set(teacher_name))
+        teacher_names_str = ", ".join(unique_teachers)
         print(str(highest_gpa_student[0]) + " " +
  	      str(highest_gpa_student[1]) + " " +
 	      str(highest_gpa_student[5]) + " " +
@@ -227,7 +228,8 @@ def find_lowest_gpa_in_grade(grade):
     if results:
         lowest_gpa_student = min(results, key=lambda student: student[5])
         teacher_name = teachers.get(lowest_gpa_student[3], "Unknown")
-        teacher_names_str = ", ".join(teacher_name)
+        unique_teachers = list(set(teacher_name))
+        teacher_names_str = ", ".join(unique_teachers)
         print(str(lowest_gpa_student[0]) + " " +
               str(lowest_gpa_student[1]) + " " +
               str(lowest_gpa_student[5]) + " " +
