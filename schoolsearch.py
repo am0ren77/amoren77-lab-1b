@@ -66,7 +66,10 @@ def find_by_classroom(classroom):
 # NR2. TC: <classnumber>
 # Given a classroom number, find the teacher (or teachers) teaching in it
 def find_teachers_by_classroom(classroom):
-    
+    teacher_name = teachers.get(classroom, ["Unknown"])
+    unique_teacher_names = list(set(teacher_name))
+    teacher_names_str = ", ".join(unique_teacher_names)
+    print(teacher_names_str)    
    
 
 # NR3. GT: <Number>
