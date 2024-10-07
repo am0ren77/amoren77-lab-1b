@@ -113,6 +113,8 @@ def report_enrollment_by_classroom():
 
 # NR5. Analytics
 
+# GGPA: <grade_number>
+# Info by grade
 def gpa_by_grade(grade):
     gpas = []
     for student in students:
@@ -127,6 +129,8 @@ def gpa_by_grade(grade):
         print("GPAs: {}".format(", ".join("{:.2f}".format(gpa) for gpa in gpas)))  
 
 
+# TGPA: <teacher>
+# Info by teacher
 def gpa_by_teacher(teacher):
     matching_classrooms = set()
     for classroom, teachers_list in teachers.items():
@@ -144,6 +148,8 @@ def gpa_by_teacher(teacher):
         print("GPAs: {}".format(", ".join("{:.2f}".format(gpa) for gpa in gpas)))
 
 
+# BGPA: <bus_route>
+# Info by bus
 def gpa_by_bus_route(bus):
     gpas = [student[5] for student in students if student[4] == bus]
     
