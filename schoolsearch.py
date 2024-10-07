@@ -45,6 +45,33 @@ def read_teachers(filename):
 
 #--------------------------------------------------------------------------------------------------
 
+# NR1 - NR4
+
+# NR1. C[lassroom]: <number>
+# Given a classroom number, list all students assigned to it.
+
+
+# NR2. TC: <classnumber>
+# Given a classroom number, find the teacher (or teachers) teaching in it
+
+
+# NR3. GT: <Number>
+# Given a grade, find all teachers who teach it.
+
+
+# NR4. E[nrollment]
+# Report the enrollments broken down by classroom (i.e., output a
+# list of classrooms ordered by classroom number, with a total number of students in each
+# of the classrooms).
+
+
+#--------------------------------------------------------------------------------------------------
+
+# NR5. Analytics
+
+
+#--------------------------------------------------------------------------------------------------
+
 # R4 - R11
 
 # R4. S[tudent]: <lastname> 
@@ -186,15 +213,3 @@ def main():
 
 if __name__ == "__main__":
     main()  
-
-
-
-
-
-
-
-
-
-
-
-
