@@ -105,7 +105,7 @@ def report_enrollment_by_classroom():
     
     sorted_classrooms = sorted(classroom_enrollments.items())
     for classroom, count in sorted_classrooms:
-        print("Classroom {}: {} student(s)".format(classroom, count))
+        print("{}: {} students".format(classroom, count))
 
 
 
@@ -329,13 +329,11 @@ def main():
 	    classroom = int(parts[1])
             find_by_classroom(classroom)
 
-
         #NR4 command
 	elif main_command.startswith('E'):
             report_enrollment_by_classroom()
 
         
-
 
 if __name__ == "__main__":
     main()  
