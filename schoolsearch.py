@@ -33,7 +33,7 @@ def read_teachers(filename):
             for line in file:
                 data = line.strip().split(',')
                 if len(data) != 3:
-                    sys.exit("Incorrect format in teachers file")
+                    sys.exit(1)
 	
 		classroom = int(data[2])
                 teacher_info = data[0] + " " + data[1]  #TLast #TFirst
@@ -47,7 +47,7 @@ def read_teachers(filename):
 		else: 
 		   teachers_dict[classroom] = [teacher_info]
     except IOError:
-        sys.exit("Teachers file not found")
+        sys.exit(1)
     return teachers_dict
 
 #--------------------------------------------------------------------------------------------------
@@ -123,7 +123,7 @@ def gpa_by_grade(grade):
         total_students = len(gpas)
         total_gpa = sum(gpas)
         avg_gpa = total_gpa / total_students if total_students > 0 else 0
-        print("Grade {} - Total GPA: {:.2f}, Average GPA: {:.2f}, Number of Students: {}".format(grade, total_gpa, avg_gpa, total_students))
+        print("Grade {}\nTotal GPA: {:.2f}\nAverage GPA: {:.2f}\nNumber of Students: {}".format(grade, total_gpa, avg_gpa, total_students))
         print("GPAs: {}".format(", ".join("{:.2f}".format(gpa) for gpa in gpas)))  
 
 
@@ -140,7 +140,7 @@ def gpa_by_teacher(teacher):
         total_students = len(gpas)
         total_gpa = sum(gpas)
         avg_gpa = total_gpa / total_students if total_students > 0 else 0
-        print("Teacher {} - Total GPA: {:.2f}, Average GPA: {:.2f}, Number of Students: {}".format(teacher, total_gpa, avg_gpa, total_students))
+        print("Teacher {}\nTotal GPA: {:.2f}\nAverage GPA: {:.2f}\nNumber of Students: {}".format(teacher, total_gpa, avg_gpa, total_students))
         print("GPAs: {}".format(", ".join("{:.2f}".format(gpa) for gpa in gpas)))
 
 
@@ -151,7 +151,7 @@ def gpa_by_bus_route(bus):
         total_students = len(gpas)
         total_gpa = sum(gpas)
         avg_gpa = total_gpa / total_students if total_students > 0 else 0
-        print("Bus Route {} - Total GPA: {:.2f}, Average GPA: {:.2f}, Number of Students: {}".format(bus, total_gpa, avg_gpa, total_students))
+        print("Bus Route {}\nTotal GPA: {:.2f}\nAverage GPA: {:.2f}\nNumber of Students: {}".format(bus, total_gpa, avg_gpa, total_students))
         print("GPAs: {}".format(", ".join("{:.2f}".format(gpa) for gpa in gpas)))
     
 #--------------------------------------------------------------------------------------------------
