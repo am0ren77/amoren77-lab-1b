@@ -25,7 +25,7 @@ TGPA: \<teacher\>
 
 BGPA: \<bus_route\>
 
-// Sample Input:
+### Sample Input:
 
 'S: COOKUS' (Command must be passed in quotes)
 
