@@ -87,7 +87,7 @@ def find_teachers_by_grade(grade):
  		    teachers_set.add(teacher) 
 
         if teachers_set:
-            print("Teachers who teach grade {}: {}".format(grade, ', '.join(teachers_set)))
+            print("\n".join(teachers_set))
         
 
 # NR4. E[nrollment]
@@ -208,10 +208,11 @@ def find_highest_gpa_in_grade(grade):
     if results:
         highest_gpa_student = max(results, key=lambda student: student[5])
         teacher_name = teachers.get(highest_gpa_student[3], "Unknown")
+        teacher_names_str = ", ".join(teacher_name)
         print(str(highest_gpa_student[0]) + " " +
  	      str(highest_gpa_student[1]) + " " +
 	      str(highest_gpa_student[5]) + " " +
-	      teacher_name 	          + " " +
+	      teacher_names_str 	  + " " +
 	      str(highest_gpa_student[4]))
 
 # R9b. G[rade]: <Number> L[ow]
@@ -220,10 +221,11 @@ def find_lowest_gpa_in_grade(grade):
     if results:
         lowest_gpa_student = min(results, key=lambda student: student[5])
         teacher_name = teachers.get(lowest_gpa_student[3], "Unknown")
+        teacher_names_str = ", ".join(teacher_name)
         print(str(lowest_gpa_student[0]) + " " +
               str(lowest_gpa_student[1]) + " " +
               str(lowest_gpa_student[5]) + " " +
-              teacher_name               + " " +
+              teacher_names_str          + " " +
               str(lowest_gpa_student[4]))
 
 # R10. A[verage]: <Number>
